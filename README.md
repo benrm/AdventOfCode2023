@@ -7,3 +7,7 @@ These are solutions for [Advent of Code 2023](https://adventofcode.com/2023/). T
 ## Day 8
 
 Up until today (excluding day 5 part 2) all of the problems have been manageable on my own. Unfortunately, although I got most of the way there myself, day 8 part 2 was spoiled for me. I had figured out the solution probably had to do with detecting cycles and mathematically figuring out when they sync up but I hadn't figured out that the input was specially crafted so that you could solve it by finding out when each loop finished and taking the least common multiple.
+
+## Day 14
+
+I'm not sure how but my part 2 for today successfully handles the input but fails the provided test case. I suspect something went wrong with the fingerprinting. Also I haven't completed day 12 part 2.
