@@ -57,22 +57,27 @@ def cycle(grid):
                     moved = True
     return grid
 
-visited = set()
+def total_load(grid):
+    length = len(grid)
+    total = 0
+    for y in range(len(grid)):
+        for char in grid[y]:
+            if char == "O":
+                total += length - y
+    return total
+
+visited = {}
 i = 0
 while fingerprint(grid) not in visited:
-    visited.add(fingerprint(grid))
+    visited[fingerprint(grid)] = i
     grid = cycle(grid)
     i += 1
 
-i = (1000000000 // i) * i
+cycle_length = i - visited[fingerprint(grid)]
+
+i = (1000000000 - visited[fingerprint(grid)]) // cycle_length * cycle_length + visited[fingerprint(grid)]
 while i < 1000000000:
     grid = cycle(grid)
     i += 1
 
-length = len(grid)
-total = 0
-for y in range(len(grid)):
-    for char in grid[y]:
-        if char == "O":
-            total += length - y
-print("Total:", total)
+print("Total:", total_load(grid))
