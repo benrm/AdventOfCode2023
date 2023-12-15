@@ -11,3 +11,7 @@ Up until today (excluding day 5 part 2) all of the problems have been manageable
 ## Day 14
 
 I'm not sure how but my part 2 for today successfully handles the input but fails the provided test case. I suspect something went wrong with the fingerprinting. Also I haven't completed day 12 part 2.
+
+## Day 15
+
+Yesterday I worked out math for day 14 that both made sense and returned the correct answers.
